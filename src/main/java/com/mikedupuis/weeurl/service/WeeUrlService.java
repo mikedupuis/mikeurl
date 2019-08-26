@@ -29,7 +29,10 @@ public class WeeUrlService {
     }
 
     public WeeUrl fetchShortUrl(String key) throws Exception {
+        logger.info("Fetching short url for " + key);
         List<WeeUrl> weeUrlList = weeUrlRepository.findByShortUrl(key);
+
+        logger.info("Got " + (weeUrlList == null ? "[NULL]" : (weeUrlList.size() + " results")));
 
         if (weeUrlList == null || weeUrlList.size() == 0) {
             // No such entry
