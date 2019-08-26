@@ -45,6 +45,8 @@ public class WeeUrlService {
 
         WeeUrl weeUrl = weeUrlList.get(0);
 
+        logger.info("Full URL is " + weeUrl.getFullUrl());
+
         weeUrl.use();
         weeUrlRepository.save(weeUrl);
 
