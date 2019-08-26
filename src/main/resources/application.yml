@@ -1,0 +1,10 @@
+spring.datasource:
+  url: ${DATABASE_URL}
+  username: postgres
+  password: docker
+
+
+spring.jpa:
+  database-platform: org.hibernate.dialect.PostgreSQLDialect
+  generate-ddl: true
+
