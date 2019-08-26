@@ -28,6 +28,7 @@ public class ShortUrlController {
         try {
             weeUrl = weeUrlService.fetchShortUrl(key);
         } catch (Exception e) {
+            logger.error("Got exception: " + e.getMessage(), e);
             httpServletResponse.setStatus(HttpServletResponse.SC_NOT_FOUND);
             return;
         }
